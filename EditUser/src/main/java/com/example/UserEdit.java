@@ -1,22 +1,21 @@
 package com.example;
 
-import javax.enterprise.context.RequestScoped;
+import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 import java.io.Serializable;
 
-@RequestScoped
-@Named
+@ViewScoped
+@Named // now it can be used in a JSF with EL
 public class UserEdit implements Serializable {
 
     private User user = new User();
 
     @Inject
-    UserDao userDAO;
+    private UserDao userDAO;
 
     public String save() {
         userDAO.save(this.user);
-        // addFlashMessage("com.example.User " + this.user.getId() + " saved");
         System.out.println("UserEdit.save");
         return "index.jsp";
     }
