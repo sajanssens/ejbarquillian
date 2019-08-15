@@ -11,6 +11,5 @@
     <% } else { %>
     Afternoon
     <% } %></h1>
-<a href="edituser.xhtml">Edit</a>
 </body>
 </html>
