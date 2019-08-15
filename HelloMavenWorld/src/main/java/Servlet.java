@@ -7,11 +7,11 @@ import java.io.IOException;
 
 @WebServlet(urlPatterns = "/serve", name = "test")
 public class Servlet extends HttpServlet {
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) {
 
     }
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.getWriter().append("Served at: ").append(request.getContextPath());
     }
 }
