@@ -1,11 +1,11 @@
 package com.example;
 
-import javax.ejb.Stateful;
+import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.io.Serializable;
 
-@Stateful
+@Stateless
 public class UserDao implements Serializable {
 
     @PersistenceContext(name = "MyPersistenceUnit")
@@ -13,7 +13,7 @@ public class UserDao implements Serializable {
 
     public void save(User user) {
         System.out.println("UserDao.save");
-        // entityManager.persist(user);
+        entityManager.persist(user);
     }
 
 }

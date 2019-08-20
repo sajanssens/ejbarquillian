@@ -1,5 +1,6 @@
 package com.example;
 
+import javax.ejb.EJB;
 import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -11,7 +12,7 @@ public class UserEdit implements Serializable {
 
     private User user = new User();
 
-    @Inject
+    @EJB
     private UserDao userDAO;
 
     public String save() {
