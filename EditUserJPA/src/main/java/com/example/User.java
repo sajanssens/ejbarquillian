@@ -20,14 +20,6 @@ public class User {
     @Size(min = 2, message = "Last name too short")
     private String lastName;
 
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
     public String getFirstName() {
         return firstName;
     }
