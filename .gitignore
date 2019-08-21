@@ -89,7 +89,7 @@ cmake-build-debug/
 ## Plugin-specific files:
 
 # IntelliJ
-/out/
+**/out/*
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/
@@ -112,7 +112,7 @@ fabric.properties
 *.iml
 modules.xml
 .idea/misc.xml
-.idea/*
+**/.idea/*
 *.ipr
 
 # Sonarlint plugin

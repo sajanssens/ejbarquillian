@@ -13,14 +13,4 @@
         <servlet-name>Faces Servlet</servlet-name>
         <url-pattern>*.xhtml</url-pattern>
     </servlet-mapping>
-
-    <!--<persistence-context-ref>
-        <persistence-context-ref-name>example/em</persistence-context-ref-name>
-        <persistence-unit-name>ExamplePersistenceUnit</persistence-unit-name>
-    </persistence-context-ref>
-
-    <persistence-unit-ref>
-        <persistence-unit-ref-name>example/emf</persistence-unit-ref-name>
-        <persistence-unit-name>ExamplePersistenceUnit</persistence-unit-name>
-    </persistence-unit-ref>-->
 </web-app>
