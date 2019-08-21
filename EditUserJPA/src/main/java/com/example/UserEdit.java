@@ -3,8 +3,6 @@ package com.example;
 import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
-import javax.naming.NamingException;
-import javax.transaction.*;
 import java.io.Serializable;
 
 @ViewScoped
@@ -16,7 +14,7 @@ public class UserEdit implements Serializable {
     @Inject
     private UserDao userDAO;
 
-    public String save() throws HeuristicMixedException, NotSupportedException, SystemException, NamingException, HeuristicRollbackException, RollbackException {
+    public String save() {
         userDAO.save(this.user);
         System.out.println("UserEdit.save");
         return "index.jsp";
