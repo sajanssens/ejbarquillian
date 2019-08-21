@@ -5,11 +5,25 @@
              version="2.1">
     <persistence-unit name="MyPersistenceUnit" transaction-type="JTA">
         <jta-data-source>jdbc/mySQL</jta-data-source>
+        <!--Eclipselink -->
+        <properties>
+            <property name="eclipselink.logging.level" value="ALL"/>
+            <property name="eclipselink.logging.level.sql" value="ALL"/>
+            <property name="eclipselink.logging.level.cache" value="ALL"/>
+            <property name="eclipselink.logging.parameters" value="true"/>
+            <property name="eclipselink.target-database" value="MySQL"/>
+            <property name="eclipselink.ddl-generation" value="create-or-extend-tables"/>
+            <property name="eclipselink.deploy-on-startup" value="true"/>
+        </properties>
+
+        <!--Hibernate -->
+        <!--
         <properties>
             <property name="hibernate.show_sql" value="true"/>
             <property name="hibernate.format_sql" value="true"/>
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect"/>
             <property name="hibernate.hbm2ddl.auto" value="update"/>
         </properties>
+        -->
     </persistence-unit>
 </persistence>

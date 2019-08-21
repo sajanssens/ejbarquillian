@@ -13,7 +13,6 @@
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
 
-
     <dependencies>
         <dependency>
             <groupId>javax</groupId>
@@ -21,10 +20,11 @@
             <version>7.0</version>
             <scope>provided</scope>
         </dependency>
-        <dependency>
+        <!--When using hibernate: -->
+        <!--<dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-entitymanager</artifactId>
             <version>5.4.4.Final</version>
-        </dependency>
+        </dependency>-->
     </dependencies>
 </project>
