@@ -4,8 +4,6 @@ import javax.validation.constraints.Size;
 
 public class User {
 
-    private Integer id;
-
     @Size(min = 2, message = "First name too short")
     private String firstName;
 
