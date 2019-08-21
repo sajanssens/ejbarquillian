@@ -7,7 +7,7 @@ import javax.validation.constraints.Size;
 import static javax.persistence.GenerationType.IDENTITY;
 
 @Entity
-@NamedQueries({@NamedQuery(name = "com.example.User.getAll", query = "SELECT u FROM User u")})
+@NamedQueries({@NamedQuery(name = "User.getAll", query = "SELECT u FROM User u")})
 public class User {
 
     @Id
