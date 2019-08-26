@@ -57,39 +57,12 @@
         <!-- can be either
                 - embedded
                 - managed
-                - remote?
-        -->
-
-        <!-- WELD-EE embedded: -->
-        <!--<dependency>
-            <groupId>org.jboss.arquillian.container</groupId>
-            <artifactId>arquillian-weld-ee-embedded-1.1</artifactId>
-            <version>1.0.0.CR9</version>
-            <scope>test</scope>
-        </dependency>-->
-
-        <!-- Glassfish managed: -->
-        <!-- <dependency>
-             <groupId>org.jboss.arquillian.container</groupId>
-             <artifactId>arquillian-glassfish-managed-3.1</artifactId>
-             <version>1.0.0.CR4</version>
-         </dependency>-->
-
-        <!-- WLP managed: -->
-        <!-- <dependency>
-             <groupId>org.jboss.arquillian.container</groupId>
-             <artifactId>arquillian-wlp-managed-8.5</artifactId>
-             <scope>test</scope>
-             <version>1.0.0.CR1</version>
-         </dependency>-->
+                - remote? -->
+        <!-- see profiles -->
 
         <!--3. Container runtime (for an embedded container) or container client (for a remote container)-->
-        <!--        <dependency>
-                    <groupId>org.jboss.weld</groupId>
-                    <artifactId>weld-core</artifactId>
-                    <version>2.3.5.Final</version>
-                    <scope>test</scope>
-                </dependency>-->
+        <!-- see profiles -->
+
     </dependencies>
     <profiles>
         <profile>
