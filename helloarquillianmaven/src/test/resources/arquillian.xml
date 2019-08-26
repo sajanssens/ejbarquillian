@@ -18,7 +18,8 @@
 			<property name="httpPort">9080</property>
 			
 			<!-- turn on for managed (local) (off for remote):  -->
-			<property name="wlpHome">C:\Java\wlp</property>			
+			<property name="wlpHome">C:\Java\wlp</property>
+
 			<!-- turn off for managed (local):  -->
 			<!-- <property name="httpsPort">9443</property>
 			<property name="hostName">localhost</property>
@@ -26,5 +27,11 @@
 			<property name="password">admin</property> -->
 		</configuration>
 	</container>
+
+	<!--<container qualifier="glassfish" default="true">
+		<configuration>
+			<property name="glassFishHome">C:\Java\glassfish5</property>
+		</configuration>
+	</container>-->
 </arquillian>
 

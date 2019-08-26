@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2d9c3a1f-9e9e-4ebf-9228-698ff4a66bc5" name="Default Changelist" comment="" />
+    <list default="true" id="2d9c3a1f-9e9e-4ebf-9228-698ff4a66bc5" name="Default Changelist" comment="First commit.">
+      <change afterPath="$PROJECT_DIR$/../helloarquillianmaven/helloarquillianmaven.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloarquillianmaven/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../helloarquillianmaven/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloarquillianmaven/src/main/java/com/example/hello/Greeter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../helloarquillianmaven/src/main/java/com/example/hello/Greeter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloarquillianmaven/src/test/java/com/example/hello/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloarquillianmaven/src/test/resources/arquillian.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../helloarquillianmaven/src/test/resources/arquillian.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -202,8 +210,18 @@
       <workItem from="1566470593499" duration="1286000" />
       <workItem from="1566475865058" duration="1307000" />
       <workItem from="1566477183545" duration="939000" />
-      <workItem from="1566478626654" duration="396000" />
+      <workItem from="1566478626654" duration="3015000" />
+      <workItem from="1566482585974" duration="12000" />
+      <workItem from="1566810738381" duration="601000" />
     </task>
+    <task id="LOCAL-00001" summary="First commit.">
+      <created>1566479119580</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1566479119580</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,6 +239,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First commit." />
+    <option name="LAST_COMMIT_MESSAGE" value="First commit." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
