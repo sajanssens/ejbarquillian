@@ -16,7 +16,7 @@ public class GreeterTest {
 
     @Deployment
     public static JavaArchive createDeployment() {
-        JavaArchive jar = ShrinkWrap.create(JavaArchive.class)
+        JavaArchive jar = ShrinkWrap.create(JavaArchive.class, "mooienaam.jar")
                 .addClass(Greeter.class)
                 .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
         System.out.println(jar.toString(true));
@@ -29,6 +29,20 @@ public class GreeterTest {
     public void greet() throws Exception {
         String name = "Arquillian";
         Assert.assertEquals("Hello, Arquillian!", greeter.createGreeting(name));
+        greeter.greet(System.out, name);
+    }
+
+    @Test
+    public void greet2() throws Exception {
+        String name = "Arquillian2";
+        Assert.assertEquals("Hello, Arquillian2!", greeter.createGreeting(name));
+        greeter.greet(System.out, name);
+    }
+
+    @Test
+    public void greet3() throws Exception {
+        String name = "Arquillian3";
+        Assert.assertEquals("Hello, Arquillian3!", greeter.createGreeting(name));
         greeter.greet(System.out, name);
     }
 }

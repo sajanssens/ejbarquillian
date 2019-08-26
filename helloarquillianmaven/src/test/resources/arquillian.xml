@@ -18,7 +18,7 @@
 			<property name="httpPort">9080</property>
 			
 			<!-- turn on for managed (local) (off for remote):  -->
-			<property name="wlpHome">C:\Java\wlp</property>
+			<property name="wlpHome">C:\Java\wlp-webProfile8-19.0.0.7\wlp</property>
 
 			<!-- turn off for managed (local):  -->
 			<!-- <property name="httpsPort">9443</property>
