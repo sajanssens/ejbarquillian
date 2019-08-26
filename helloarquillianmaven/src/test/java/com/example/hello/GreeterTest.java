@@ -26,21 +26,21 @@ public class GreeterTest {
     @Inject Greeter greeter;
 
     @Test
-    public void greet() throws Exception {
+    public void greet() {
         String name = "Arquillian";
         Assert.assertEquals("Hello, Arquillian!", greeter.createGreeting(name));
         greeter.greet(System.out, name);
     }
 
     @Test
-    public void greet2() throws Exception {
+    public void greet2() {
         String name = "Arquillian2";
         Assert.assertEquals("Hello, Arquillian2!", greeter.createGreeting(name));
         greeter.greet(System.out, name);
     }
 
     @Test
-    public void greet3() throws Exception {
+    public void greet3() {
         String name = "Arquillian3";
         Assert.assertEquals("Hello, Arquillian3!", greeter.createGreeting(name));
         greeter.greet(System.out, name);
