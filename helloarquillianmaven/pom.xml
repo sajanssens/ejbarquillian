@@ -37,6 +37,14 @@
             <version>7.0</version>
             <scope>provided</scope>
         </dependency>
+        <!-- use this when using java 8+ : -->
+        <!-- <dependency>
+              <groupId>com.sun</groupId>
+              <artifactId>tools</artifactId>
+              <version>1.6.0</version>
+              <scope>system</scope>
+              <systemPath>C:/Program Files/Java/jdk8u222-b10/lib/tools.jar</systemPath>
+          </dependency>-->
 
         <!--1. Arquillian JUnit integration framework-->
         <dependency>
