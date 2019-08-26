@@ -1,9 +1,9 @@
 package com.example.hello;
 
-import javax.ejb.Stateless;
+import javax.enterprise.context.Dependent;
 import java.io.PrintStream;
 
-@Stateless
+@Dependent
 public class Greeter {
     public void greet(PrintStream to, String name) {
         to.println(createGreeting(name));

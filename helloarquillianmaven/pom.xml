@@ -76,12 +76,12 @@
          </dependency>-->
 
         <!-- WLP managed: -->
-        <dependency>
-            <groupId>org.jboss.arquillian.container</groupId>
-            <artifactId>arquillian-wlp-managed-8.5</artifactId>
-            <scope>test</scope>
-            <version>1.0.0.CR1</version>
-        </dependency>
+        <!-- <dependency>
+             <groupId>org.jboss.arquillian.container</groupId>
+             <artifactId>arquillian-wlp-managed-8.5</artifactId>
+             <scope>test</scope>
+             <version>1.0.0.CR1</version>
+         </dependency>-->
 
         <!--3. Container runtime (for an embedded container) or container client (for a remote container)-->
         <!--        <dependency>
@@ -91,5 +91,48 @@
                     <scope>test</scope>
                 </dependency>-->
     </dependencies>
+    <profiles>
+        <profile>
+            <id>wlp-managed</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <dependencies>
+                <dependency>
+                    <groupId>org.jboss.arquillian.container</groupId>
+                    <artifactId>arquillian-wlp-managed-8.5</artifactId>
+                    <scope>test</scope>
+                    <version>1.0.0.CR1</version>
+                </dependency>
+            </dependencies>
+        </profile>
+        <profile>
+            <id>weld-ee-embedded</id>
+            <dependencies>
+                <dependency>
+                    <groupId>org.jboss.arquillian.container</groupId>
+                    <artifactId>arquillian-weld-ee-embedded-1.1</artifactId>
+                    <version>1.0.0.CR9</version>
+                    <scope>test</scope>
+                </dependency>
+                <dependency>
+                    <groupId>org.jboss.weld</groupId>
+                    <artifactId>weld-core</artifactId>
+                    <version>2.3.5.Final</version>
+                    <scope>test</scope>
+                </dependency>
+            </dependencies>
+        </profile>
+        <profile>
+            <id>glassfish-managed</id>
+            <dependencies>
+                <dependency>
+                    <groupId>org.jboss.arquillian.container</groupId>
+                    <artifactId>arquillian-glassfish-managed-3.1</artifactId>
+                    <version>1.0.0.CR4</version>
+                </dependency>
+            </dependencies>
+        </profile>
+    </profiles>
 
 </project>
