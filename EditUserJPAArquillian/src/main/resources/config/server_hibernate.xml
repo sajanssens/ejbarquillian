@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<server description="new server">
+    <!-- Enable features -->
+    <featureManager>
+        <feature>webProfile-7.0</feature>
+        <feature>localConnector-1.0</feature>
+    </featureManager>
+
+    <applicationManager autoExpand="true"/>
+    <applicationMonitor updateTrigger="mbean"/>
+
+    <!--JPA:-->
+    <jpa defaultPersistenceProvider="org.hibernate.jpa.HibernatePersistenceProvider"/>
+    <dataSource id="DefaultDataSource" jndiName="jdbc/mySQL" type="javax.sql.XADataSource">
+        <jdbcDriver javax.sql.XADataSource="com.mysql.cj.jdbc.MysqlXADataSource" libraryRef="MySQLLib"/>
+        <properties databaseName="edituserjpa" user="root" password="root" portNumber="3306" serverName="localhost" useSSL="false"/>
+    </dataSource>
+    <library id="MySQLLib">
+        <file name="${shared.config.dir}/lib/global/mysql-connector-java-8.0.9-rc.jar"/>
+    </library>
+    <!--JPA - end-->
+
+    <application id="edit_user_jpa_war_exploded"
+                 location="C:\Git\Github\sajanssens\ejbarquillian\EditUserJPA\target\edit-user-jpa-1.0-SNAPSHOT"
+                 name="edit_user_jpa_war_exploded" type="war"/>
+</server>
+
