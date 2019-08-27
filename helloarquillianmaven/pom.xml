@@ -70,6 +70,9 @@
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
+            <properties>
+                <arquillian-container>wlp-managed</arquillian-container>
+            </properties>
             <dependencies>
                 <dependency>
                     <groupId>org.jboss.arquillian.container</groupId>
@@ -81,6 +84,9 @@
         </profile>
         <profile>
             <id>weld-ee-embedded</id>
+            <properties>
+                <arquillian-container>embedded</arquillian-container>
+            </properties>
             <dependencies>
                 <dependency>
                     <groupId>org.jboss.arquillian.container</groupId>
@@ -94,10 +100,38 @@
                     <version>2.3.5.Final</version>
                     <scope>test</scope>
                 </dependency>
+                <dependency>
+                    <groupId>javax</groupId>
+                    <artifactId>javaee-api</artifactId>
+                    <version>7.0</version>
+                    <scope>test</scope>
+                </dependency>
+            </dependencies>
+        </profile>
+        <profile>
+            <id>tom-ee-embedded</id>
+            <properties>
+                <arquillian-container>embedded</arquillian-container>
+            </properties>
+            <dependencies>
+                <dependency>
+                    <groupId>org.apache.openejb</groupId>
+                    <artifactId>arquillian-tomee-embedded</artifactId>
+                    <version>1.7.1</version>
+                    <!--                    <version>1.7.1</version> &lt;!&ndash;Current version&ndash;&gt;-->
+                </dependency>
+                <dependency>
+                    <groupId>org.apache.openejb</groupId>
+                    <artifactId>tomee-embedded</artifactId>
+                    <version>1.7.1</version>
+                </dependency>
             </dependencies>
         </profile>
         <profile>
             <id>glassfish-managed</id>
+            <properties>
+                <arquillian-container>glassfish-managed</arquillian-container>
+            </properties>
             <dependencies>
                 <dependency>
                     <groupId>org.jboss.arquillian.container</groupId>
@@ -107,5 +141,18 @@
             </dependencies>
         </profile>
     </profiles>
+    <build>
+        <!-- Loading all ${} -->
+        <filters>
+            <filter>src/test/resources/${arquillian-container}/arquillian.xml</filter>
+        </filters>
 
+        <!-- Map ${} into resources -->
+        <testResources>
+            <testResource>
+                <directory>src/test/resources/${arquillian-container}</directory>
+                <filtering>true</filtering>
+            </testResource>
+        </testResources>
+    </build>
 </project>

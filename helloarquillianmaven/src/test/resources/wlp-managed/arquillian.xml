@@ -10,7 +10,6 @@
 		Going from managed to remote:
 		Unused property entries: {wlpHome=/Applications/development/appservers/ejbcontainers/ibm/17.0.0.3/wlp}
 		Supported property names: [appUndeployTimeout, outputToConsole, hostName, appDeployTimeout, password, httpPort, serverStartTimeout, serverName, httpsPort, username]
-		
 	 -->
 	<container qualifier="websphere" default="true">
 		<configuration>
@@ -27,11 +26,5 @@
 			<property name="password">admin</property> -->
 		</configuration>
 	</container>
-
-	<!--<container qualifier="glassfish" default="true">
-		<configuration>
-			<property name="glassFishHome">C:\Java\glassfish5</property>
-		</configuration>
-	</container>-->
 </arquillian>
 
