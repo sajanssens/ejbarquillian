@@ -6,6 +6,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.home>C:\Program Files\Java\jdk8u222-b10\bin</java.home>
     </properties>
 
     <groupId>com.example</groupId>
@@ -54,13 +55,13 @@
             </properties>
             <dependencies>
                 <!-- use this when using java 9+ : -->
-                <!--<dependency>
+                <dependency>
                     <groupId>com.sun</groupId>
                     <artifactId>tools</artifactId>
                     <version>1.6.0</version>
                     <scope>system</scope>
-                    <systemPath>C:/Program Files/Java/jdk8u222-b10/lib/tools.jar</systemPath>
-                </dependency>-->
+                    <systemPath>${java.home}/../lib/tools.jar</systemPath>
+                </dependency>
                 <dependency>
                     <groupId>org.jboss.arquillian.container</groupId>
                     <artifactId>arquillian-wlp-managed-8.5</artifactId>
@@ -76,13 +77,13 @@
             </properties>
             <dependencies>
                 <!-- use this when using java 9+ : -->
-                <!--<dependency>
-                    <groupId>com.sun</groupId>
-                    <artifactId>tools</artifactId>
-                    <version>1.6.0</version>
-                    <scope>system</scope>
-                    <systemPath>C:/Program Files/Java/jdk8u222-b10/lib/tools.jar</systemPath>
-                </dependency>-->
+                <dependency>
+                     <groupId>com.sun</groupId>
+                     <artifactId>tools</artifactId>
+                     <version>1.6.0</version>
+                     <scope>system</scope>
+                     <systemPath>${java.home}/../lib/tools.jar</systemPath>
+                 </dependency>
                 <dependency>
                     <groupId>org.jboss.arquillian.container</groupId>
                     <artifactId>arquillian-wlp-remote-8.5</artifactId>
@@ -155,5 +156,14 @@
                 <filtering>true</filtering>
             </testResource>
         </testResources>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
+            </plugin>
+        </plugins>
     </build>
 </project>

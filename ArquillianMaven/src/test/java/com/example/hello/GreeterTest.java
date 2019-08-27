@@ -13,6 +13,7 @@ import javax.inject.Inject;
 
 // to make this run:
 // - select a maven profile
+//     (for wlp: complete the com.sun:tools dependency in pom)
 // - complete the corresponding arquillian.xml
 // - in IDEA: click the play button and make a run configuration with an empty manual arquillian container (since classpath is taken from pom)
 // - in maven: just run mvn test
