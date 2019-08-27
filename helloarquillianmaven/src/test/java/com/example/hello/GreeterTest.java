@@ -11,8 +11,8 @@ import org.junit.runner.RunWith;
 
 import javax.inject.Inject;
 
-// to  make this run:
-// - activate the correct dependencies in pom
+// to make this run:
+// - activate the desired dependencies in pom
 // - complete the corresponding arquillian.xml
 // - in IDEA: click the play button and make a run configuration with an empty Manual arquillian container (since classpath is taken from pom)
 // - in maven: just run mvn test
