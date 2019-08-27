@@ -37,7 +37,33 @@
             <version>7.0</version>
             <scope>provided</scope>
         </dependency>
-        <!-- use this when using java 8+ : -->
+
+        <!--1. Arquillian JUnit integration framework (required at all times) -->
+        <dependency>
+            <groupId>org.jboss.arquillian.junit</groupId>
+            <artifactId>arquillian-junit-container</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <!--2. Arquillian container adapter for the target container-->
+        <!-- container can be either: embedded, managed or remote -->
+
+        <!--weld embedded-->
+        <!--<dependency>
+             <groupId>org.jboss.arquillian.container</groupId>
+             <artifactId>arquillian-weld-ee-embedded-1.1</artifactId>
+             <version>1.0.0.CR9</version>
+             <scope>test</scope>
+         </dependency>-->
+
+        <!--wlp managed-->
+        <dependency>
+            <groupId>org.jboss.arquillian.container</groupId>
+            <artifactId>arquillian-wlp-managed-8.5</artifactId>
+            <scope>test</scope>
+            <version>1.0.0.CR1</version>
+        </dependency>
+        <!-- use this when using java 9+ : -->
         <!-- <dependency>
               <groupId>com.sun</groupId>
               <artifactId>tools</artifactId>
@@ -46,113 +72,15 @@
               <systemPath>C:/Program Files/Java/jdk8u222-b10/lib/tools.jar</systemPath>
           </dependency>-->
 
-        <!--1. Arquillian JUnit integration framework-->
-        <dependency>
-            <groupId>org.jboss.arquillian.junit</groupId>
-            <artifactId>arquillian-junit-container</artifactId>
+        <!--3. Container runtime (for an embedded container) -->
+
+        <!--weld embedded runtime-->
+        <!--<dependency>
+            <groupId>org.jboss.weld</groupId>
+            <artifactId>weld-core</artifactId>
+            <version>2.3.5.Final</version>
             <scope>test</scope>
-        </dependency>
-
-        <!--2. Arquillian container adapter for the target container-->
-        <!-- can be either
-                - embedded
-                - managed
-                - remote? -->
-        <!-- see profiles -->
-
-        <!--3. Container runtime (for an embedded container) or container client (for a remote container)-->
-        <!-- see profiles -->
+        </dependency>-->
 
     </dependencies>
-    <profiles>
-        <profile>
-            <id>wlp-managed</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-            <properties>
-                <arquillian-container>wlp-managed</arquillian-container>
-            </properties>
-            <dependencies>
-                <dependency>
-                    <groupId>org.jboss.arquillian.container</groupId>
-                    <artifactId>arquillian-wlp-managed-8.5</artifactId>
-                    <scope>test</scope>
-                    <version>1.0.0.CR1</version>
-                </dependency>
-            </dependencies>
-        </profile>
-        <profile>
-            <id>weld-ee-embedded</id>
-            <properties>
-                <arquillian-container>embedded</arquillian-container>
-            </properties>
-            <dependencies>
-                <dependency>
-                    <groupId>org.jboss.arquillian.container</groupId>
-                    <artifactId>arquillian-weld-ee-embedded-1.1</artifactId>
-                    <version>1.0.0.CR9</version>
-                    <scope>test</scope>
-                </dependency>
-                <dependency>
-                    <groupId>org.jboss.weld</groupId>
-                    <artifactId>weld-core</artifactId>
-                    <version>2.3.5.Final</version>
-                    <scope>test</scope>
-                </dependency>
-                <dependency>
-                    <groupId>javax</groupId>
-                    <artifactId>javaee-api</artifactId>
-                    <version>7.0</version>
-                    <scope>test</scope>
-                </dependency>
-            </dependencies>
-        </profile>
-        <profile>
-            <id>tom-ee-embedded</id>
-            <properties>
-                <arquillian-container>embedded</arquillian-container>
-            </properties>
-            <dependencies>
-                <dependency>
-                    <groupId>org.apache.openejb</groupId>
-                    <artifactId>arquillian-tomee-embedded</artifactId>
-                    <version>1.7.1</version>
-                    <!--                    <version>1.7.1</version> &lt;!&ndash;Current version&ndash;&gt;-->
-                </dependency>
-                <dependency>
-                    <groupId>org.apache.openejb</groupId>
-                    <artifactId>tomee-embedded</artifactId>
-                    <version>1.7.1</version>
-                </dependency>
-            </dependencies>
-        </profile>
-        <profile>
-            <id>glassfish-managed</id>
-            <properties>
-                <arquillian-container>glassfish-managed</arquillian-container>
-            </properties>
-            <dependencies>
-                <dependency>
-                    <groupId>org.jboss.arquillian.container</groupId>
-                    <artifactId>arquillian-glassfish-managed-3.1</artifactId>
-                    <version>1.0.0.CR4</version>
-                </dependency>
-            </dependencies>
-        </profile>
-    </profiles>
-    <build>
-        <!-- Loading all ${} -->
-        <filters>
-            <filter>src/test/resources/${arquillian-container}/arquillian.xml</filter>
-        </filters>
-
-        <!-- Map ${} into resources -->
-        <testResources>
-            <testResource>
-                <directory>src/test/resources/${arquillian-container}</directory>
-                <filtering>true</filtering>
-            </testResource>
-        </testResources>
-    </build>
 </project>

@@ -11,6 +11,11 @@ import org.junit.runner.RunWith;
 
 import javax.inject.Inject;
 
+// to  make this run:
+// - activate the correct dependencies in pom
+// - complete the corresponding arquillian.xml
+// - in IDEA: click the play button and make a run configuration with an empty Manual arquillian container (since classpath is taken from pom)
+// - in maven: just run mvn test
 @RunWith(Arquillian.class)
 public class GreeterTest {
 
@@ -18,7 +23,7 @@ public class GreeterTest {
     public static JavaArchive createDeployment() {
         JavaArchive jar = ShrinkWrap.create(JavaArchive.class, "mooienaam.jar")
                 .addClass(Greeter.class)
-                .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
+                .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml"); // we need an empty beans.xml file to activate CDI (EJB is automatically activated)
         System.out.println(jar.toString(true));
         return jar;
     }

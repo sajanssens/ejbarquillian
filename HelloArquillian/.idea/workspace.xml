@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d9c3a1f-9e9e-4ebf-9228-698ff4a66bc5" name="Default Changelist" comment="First commit.">
-      <change beforePath="$PROJECT_DIR$/.idea/arquillianContainers.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/arquillianContainers.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/GreeterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/GreeterTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../helloarquillianmaven/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../helloarquillianmaven/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../helloarquillianmaven/src/main/java/com/example/hello/Greeter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../helloarquillianmaven/src/main/java/com/example/hello/Greeter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../helloarquillianmaven/src/test/java/com/example/hello/GreeterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../helloarquillianmaven/src/test/java/com/example/hello/GreeterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloarquillianmaven/src/test/resources/embedded/arquillian.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloarquillianmaven/src/test/resources/glassfish-managed/arquillian.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloarquillianmaven/src/test/resources/wlp-managed/arquillian.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../helloarquillianmaven/src/test/resources/arquillian.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
