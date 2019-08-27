@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2d9c3a1f-9e9e-4ebf-9228-698ff4a66bc5" name="Default Changelist" comment="First commit.">
+    <list default="true" id="2d9c3a1f-9e9e-4ebf-9228-698ff4a66bc5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelloArquillian.iml" beforeDir="false" afterPath="$PROJECT_DIR$/HelloArquillian.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/GreeterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/GreeterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloarquillianmaven/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../helloarquillianmaven/pom.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,7 +42,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Arquillian JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
     <property name="create.test.in.the.same.root" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../helloarquillianmaven/pom.xml" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -224,7 +223,7 @@
       <workItem from="1566823173896" duration="36000" />
       <workItem from="1566906794939" duration="1429000" />
       <workItem from="1566908233716" duration="613000" />
-      <workItem from="1566910665348" duration="214000" />
+      <workItem from="1566910665348" duration="533000" />
     </task>
     <task id="LOCAL-00001" summary="First commit.">
       <created>1566479119580</created>
@@ -233,7 +232,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566479119580</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Ja.">
+      <created>1566910893191</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1566910893191</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -254,7 +260,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commit." />
-    <option name="LAST_COMMIT_MESSAGE" value="First commit." />
+    <MESSAGE value="Ja." />
+    <option name="LAST_COMMIT_MESSAGE" value="Ja." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
