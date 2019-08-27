@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2d9c3a1f-9e9e-4ebf-9228-698ff4a66bc5" name="Default Changelist" comment="">
+    <list default="true" id="2d9c3a1f-9e9e-4ebf-9228-698ff4a66bc5" name="Default Changelist" comment="First commit.">
+      <change beforePath="$PROJECT_DIR$/../ArquillianMaven/src/test/java/com/example/hello/GreeterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ArquillianMaven/src/test/java/com/example/hello/GreeterTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../helloarquillianmaven/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../helloarquillianmaven/pom.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,7 +32,8 @@
   <component name="ProjectId" id="1Pjx34gWYb8HiiuXiISlyVNNj2G" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
-    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="Downloaded.Files.Path.Enabled" value="true" />
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
@@ -42,7 +43,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Arquillian JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
     <property name="create.test.in.the.same.root" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../helloarquillianmaven/pom.xml" />
+    <property name="last_opened_file_path" value="C:/temp/ejbarquillian/HelloArquillian" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -51,7 +52,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15917969" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -222,8 +223,7 @@
       <workItem from="1566810738381" duration="601000" />
       <workItem from="1566823173896" duration="36000" />
       <workItem from="1566906794939" duration="1429000" />
-      <workItem from="1566908233716" duration="613000" />
-      <workItem from="1566910665348" duration="533000" />
+      <workItem from="1566908233716" duration="1391000" />
     </task>
     <task id="LOCAL-00001" summary="First commit.">
       <created>1566479119580</created>
@@ -232,14 +232,7 @@
       <option name="project" value="LOCAL" />
       <updated>1566479119580</updated>
     </task>
-    <task id="LOCAL-00002" summary="Ja.">
-      <created>1566910893191</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1566910893191</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,15 +253,14 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commit." />
-    <MESSAGE value="Ja." />
-    <option name="LAST_COMMIT_MESSAGE" value="Ja." />
+    <option name="LAST_COMMIT_MESSAGE" value="First commit." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/test/GreeterTest.java</url>
-          <line>29</line>
+          <line>28</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
