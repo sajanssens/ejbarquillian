@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d9c3a1f-9e9e-4ebf-9228-698ff4a66bc5" name="Default Changelist" comment="First commit.">
+      <change beforePath="$PROJECT_DIR$/.idea/arquillianContainers.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/arquillianContainers.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/GreeterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/GreeterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloarquillianmaven/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../helloarquillianmaven/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloarquillianmaven/src/main/java/com/example/hello/Greeter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../helloarquillianmaven/src/main/java/com/example/hello/Greeter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloarquillianmaven/src/test/java/com/example/hello/GreeterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../helloarquillianmaven/src/test/java/com/example/hello/GreeterTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,7 +55,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15917969" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -84,12 +89,28 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Arquillian JUnit.GF Managed: GreeterTest">
-    <configuration name="GF Managed: GreeterTest" type="ArquillianJUnit" factoryName="" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Arquillian JUnit.GlassFish Embedded 3.1: GreeterTest">
+    <configuration name="GlassFish Embedded 3.1: GreeterTest" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <module name="HelloArquillian" />
       <option name="arquillianRunConfiguration">
         <value>
-          <option name="containerStateName" value="GF Managed" />
+          <option name="containerStateName" value="GlassFish Embedded 3.1" />
+        </value>
+      </option>
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="GreeterTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="PARAMETERS" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GlassFish Managed 3.1: GreeterTest" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <module name="HelloArquillian" />
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="GlassFish Managed 3.1" />
         </value>
       </option>
       <option name="PACKAGE_NAME" value="" />
@@ -179,14 +200,10 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Arquillian JUnit.GF Managed: GreeterTest" />
+      <item itemvalue="Arquillian JUnit.GlassFish Managed 3.1: GreeterTest" />
+      <item itemvalue="Arquillian JUnit.GlassFish Embedded 3.1: GreeterTest" />
       <item itemvalue="GlassFish Server.GlassFish 5.0.0" />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Arquillian JUnit.GF Managed: GreeterTest" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -208,6 +225,8 @@
       <workItem from="1566482585974" duration="12000" />
       <workItem from="1566810738381" duration="601000" />
       <workItem from="1566823173896" duration="36000" />
+      <workItem from="1566906794939" duration="1429000" />
+      <workItem from="1566908233716" duration="613000" />
     </task>
     <task id="LOCAL-00001" summary="First commit.">
       <created>1566479119580</created>

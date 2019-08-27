@@ -13,7 +13,7 @@ import javax.inject.Inject;
 @RunWith(Arquillian.class)
 public class GreeterTest {
 
-    // See https://www.jetbrains.com/help/idea/arquillian.html#a6afa129 for configuring IDEA
+    // See https://www.jetbrains.com/help/idea/arquillian.html for configuring IDEA
 
     @Deployment
     public static JavaArchive createDeployment() {
