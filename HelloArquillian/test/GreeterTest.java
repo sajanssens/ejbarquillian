@@ -10,10 +10,11 @@ import org.junit.runner.RunWith;
 
 import javax.inject.Inject;
 
+// fix build error by adding junit4 to classpath
 @RunWith(Arquillian.class)
 public class GreeterTest {
 
-    // See https://www.jetbrains.com/help/idea/arquillian.html for configuring IDEA
+    // See https://www.jetbrains.com/help/idea/arquillian.html for running and configuring in IDEA
 
     @Deployment
     public static JavaArchive createDeployment() {
