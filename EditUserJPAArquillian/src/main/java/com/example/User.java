@@ -36,4 +36,7 @@ public class User {
         this.lastName = lastName;
     }
 
+    public Integer getId() {
+        return id;
+    }
 }

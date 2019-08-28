@@ -22,4 +22,9 @@ public class UserDao implements Serializable {
         return em.createNamedQuery("User.getAll", User.class).getResultList();
     }
 
+    public void delete(User u) {
+        User user = em.find(User.class, u.getId());
+        em.remove(user);
+    }
+
 }
