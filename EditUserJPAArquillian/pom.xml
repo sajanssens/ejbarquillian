@@ -10,10 +10,10 @@
     <version>1.0-SNAPSHOT</version>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <wlp.version>19.0.0.7</wlp.version>
+        <failOnMissingWebXml>false</failOnMissingWebXml>
     </properties>
 
     <dependencyManagement>
@@ -50,6 +50,7 @@
             <groupId>io.openliberty.arquillian</groupId>
             <artifactId>arquillian-liberty-managed</artifactId>
             <version>1.0.6</version>
+            <!--<scope>test</scope>-->
         </dependency>
         <dependency>
             <groupId>com.h2database</groupId>
@@ -58,4 +59,15 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+    <build>
+        <finalName>edit-user-jpa-arquillian</finalName>
+        <plugins>
+            <plugin>
+                <!-- mvn clean package tomee:run -->
+                <groupId>org.apache.openejb.maven</groupId>
+                <artifactId>tomee-maven-plugin</artifactId>
+                <version>1.7.1</version>
+            </plugin>
+        </plugins>
+    </build>
 </project>
