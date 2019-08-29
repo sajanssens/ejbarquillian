@@ -4,7 +4,8 @@
              http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
              version="2.1">
     <persistence-unit name="MyPersistenceUnit" transaction-type="JTA">
-        <jta-data-source>jdbc/mySQL</jta-data-source>
+        <!--        <jta-data-source>jdbc/mySQL</jta-data-source>-->
+        <jta-data-source>jdbc/h2test</jta-data-source>
         <!--Eclipselink -->
         <properties>
             <property name="eclipselink.logging.level" value="ALL"/>

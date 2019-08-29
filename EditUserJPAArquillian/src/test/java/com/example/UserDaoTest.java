@@ -17,7 +17,6 @@ public class UserDaoTest {
     @Inject
     private UserDao dao;
 
-
     @Deployment
     public static WebArchive createDeployment() {
         WebArchive archive = ShrinkWrap.create(WebArchive.class)
