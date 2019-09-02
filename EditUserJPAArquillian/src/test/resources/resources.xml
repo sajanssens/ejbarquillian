@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <Resource id="DefaultDataSource" jndiName="jdbc/mySQL" type="javax.sql.XADataSource">
+        JdbcDriver com.mysql.cj.jdbc.MysqlXADataSource
+        JdbcUrl jdbc:mysql://localhost:3306/edituserjpa?useSSL=false
+        UserName root
+        Password root
+    </Resource>
+</resources>

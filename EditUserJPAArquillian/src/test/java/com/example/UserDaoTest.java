@@ -22,6 +22,7 @@ public class UserDaoTest {
         WebArchive archive = ShrinkWrap.create(WebArchive.class)
                 .addPackage(UserDao.class.getPackage())
                 .addAsResource("test-persistence.xml", "META-INF/persistence.xml")
+                // .addAsWebInfResource("resources.xml") // doesnt work...
                 .addAsWebInfResource(EmptyAsset.INSTANCE, "beans.xml");
 
         System.out.println(archive.toString(true));
