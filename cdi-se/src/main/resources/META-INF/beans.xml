@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans><!--bean-discovery-mode="all"-->
+    <!--
+    The beans element can have one or more of each of the following children:
+    interceptors
+    decorators
+    alternatives
+    -->
+</beans>
