@@ -4,8 +4,9 @@ import com.example.cdi.greeters.IGreeting;
 import com.example.cdi.greeters.qualifiers.NL;
 import org.slf4j.Logger;
 
+import javax.enterprise.event.Event;
+import javax.enterprise.inject.Any;
 import javax.inject.Inject;
-import javax.inject.Provider;
 
 public class MyPOJO {
 
@@ -13,14 +14,16 @@ public class MyPOJO {
 
     @Inject @NL IGreeting greeters;
 
+    @Inject @Any Event<Person> personEvent;
+
     @Inject
     public MyPOJO(Logger log) {
         this.log = log;
-        IGreeting iGreeter = greeters/*.get()*/;
     }
 
     public String hi() {
         log.info("Hi was called...");
+        personEvent.fire(new Person("Piet"));
         return "HI";
     }
 
