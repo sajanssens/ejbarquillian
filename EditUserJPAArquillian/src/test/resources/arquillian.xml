@@ -7,8 +7,8 @@
         <configuration>
             <property name="serverName">defaultServer</property>
             <property name="httpPort">9080</property>
-<!--            <property name="wlpHome">C:\Java\wlp-webProfile8-19.0.0.7\wlp</property>-->
-            <property name="wlpHome">target/liberty/wlp</property>
+            <property name="wlpHome">C:\Java\wlp-webProfile8-19.0.0.7\wlp</property>
+<!--            <property name="wlpHome">target/liberty/wlp</property>-->
         </configuration>
     </container>
 

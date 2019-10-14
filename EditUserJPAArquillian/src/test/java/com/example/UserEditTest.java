@@ -5,11 +5,9 @@ import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.jboss.shrinkwrap.api.asset.EmptyAsset;
 import org.jboss.shrinkwrap.api.spec.WebArchive;
-import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import javax.faces.bean.CustomScoped;
 import javax.inject.Inject;
 
 import static org.hamcrest.CoreMatchers.containsString;
@@ -55,6 +53,6 @@ public class UserEditTest {
                 .filter(u -> u.getLastName().equals("Janssens"))
                 .count();
 
-        assertThat(janssens2 - janssens , is(1L));
+        assertThat(janssens2 - janssens, is(1L));
     }
 }
