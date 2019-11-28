@@ -114,6 +114,24 @@
             </dependencies>
         </profile>
         <profile>
+            <id>glassfish-embedded</id>
+            <properties>
+                <arquillian-container>embedded</arquillian-container>
+            </properties>
+            <dependencies>
+                <dependency>
+                    <groupId>org.jboss.arquillian.container</groupId>
+                    <artifactId>arquillian-glassfish-embedded-3.1</artifactId>
+                    <version>1.0.2</version>
+                </dependency>
+                <dependency>
+                    <groupId>org.glassfish.extras</groupId>
+                    <artifactId>glassfish-embedded-web</artifactId>
+                    <version>3.2-b06</version>
+                </dependency>
+            </dependencies>
+        </profile>
+        <profile>
             <id>glassfish-managed</id>
             <properties>
                 <arquillian-container>glassfish-managed</arquillian-container>
