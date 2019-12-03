@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <packaging>war</packaging>
+
+    <groupId>com.example</groupId>
+    <artifactId>edit-user-jpa-arquillian-and-more</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <maven.compiler.release>8</maven.compiler.release>
+        <failOnMissingWebXml>false</failOnMissingWebXml>
+
+        <arquillian.bom.version>1.5.0.Final</arquillian.bom.version>
+        <javaee.version>7.0</javaee.version>
+        <junit.version>4.12</junit.version>
+        <arquillian.liberty.version>1.0.6</arquillian.liberty.version>
+        <h2.connector.version>1.4.200</h2.connector.version>
+        <openliberty.runtime.version>19.0.0.7</openliberty.runtime.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.jboss.arquillian</groupId>
+                <artifactId>arquillian-bom</artifactId>
+                <version>${arquillian.bom.version}</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>javax</groupId>
+            <artifactId>javaee-api</artifactId>
+            <version>${javaee.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.arquillian.junit</groupId>
+            <artifactId>arquillian-junit-container</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.openliberty.arquillian</groupId>
+            <artifactId>arquillian-liberty-managed</artifactId>
+            <version>${arquillian.liberty.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>${h2.connector.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <!-- To run Arquillian test: -->
+    <!-- mvn verify -->
+
+    <!-- To run Arquillian tests from IntelliJ: -->
+    <!-- Disable Arquillian plugin in IntelliJ to easily run the tests (or choose manual container configuration) -->
+    <!-- Make sure Liberty is downloaded, installed and configured (mvn package) before running tests from IntelliJ -->
+    <!-- Make sure all test classes end on 'IT' so FailSafe can pick them up -->
+    <!-- Press the play button on a test class or method -->
+
+    <!-- To run the application use the following commands: -->
+    <!-- mvn (clean) package builds the application, creates the server and copies the libs -->
+    <!-- mvn liberty:start -->
+    <!-- mvn liberty:deploy@deploy-app deploys to  target/liberty/wlp/user/servers/defaultServer/apps -->
+    <!--                               view log in target/liberty/wlp/user/servers/defaultServer/logs-->
+    <!--                               open http://localhost:9080/edit-user-jpa-arquillian/ -->
+    <!-- mvn liberty:undeploy -->
+    <!-- mvn liberty:stop -->
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <plugins>
+            <!-- Download Liberty to target directory -->
+            <plugin>
+                <groupId>net.wasdev.wlp.maven.plugins</groupId>
+                <artifactId>liberty-maven-plugin</artifactId>
+                <version>3.0.M1</version>
+                <configuration>
+                    <assemblyArtifact>
+                        <!-- Liberty server to run test against -->
+                        <groupId>io.openliberty</groupId>
+                        <artifactId>openliberty-runtime</artifactId>
+                        <version>${openliberty.runtime.version}</version>
+                        <type>zip</type>
+                    </assemblyArtifact>
+                    <configFile>${project.build.directory}/server.xml</configFile> <!-- Used to run the application -->
+                    <configFile>src/test/resources/server.xml</configFile>  <!--Used to run Arquillian -->
+                </configuration>
+                <executions>
+                    <!-- Create server during prepare-package phase for running the application AND Arquillian -->
+                    <execution>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>create-server</goal>
+                        </goals>
+                    </execution>
+                    <!-- Used for deploying and running the application itself, not for Arquillian-->
+                    <execution>
+                        <id>deploy-app</id>
+                        <goals>
+                            <goal>deploy</goal>
+                        </goals>
+                        <configuration>
+                            <appArchive>${project.basedir}\target\${project.build.finalName}.war</appArchive>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <!-- Copy jars to Liberty's /lib -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>3.1.1</version>
+                <!-- Copy database connectors during package phase for running the application AND Arquillian. -->
+                <executions>
+                    <execution>
+                        <id>copy</id>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>copy</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <artifactItems>
+                        <artifactItem>
+                            <groupId>com.h2database</groupId>
+                            <artifactId>h2</artifactId>
+                            <type>jar</type>
+                            <overWrite>false</overWrite>
+                            <outputDirectory>${project.build.directory}/liberty/wlp/usr/shared/resources
+                            </outputDirectory>
+                            <destFileName>h2.jar</destFileName>
+                        </artifactItem>
+                    </artifactItems>
+                </configuration>
+            </plugin>
+            <!-- Run and verify ...IT.java-tests -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-failsafe-plugin</artifactId>
+                <version>2.22.2</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>integration-test</goal>
+                            <goal>verify</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>
