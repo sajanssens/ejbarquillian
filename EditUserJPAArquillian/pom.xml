@@ -81,6 +81,7 @@
     <!-- mvn liberty:start -->
     <!-- mvn liberty:deploy@deploy-app deploys to  target/liberty/wlp/user/servers/defaultServer/apps -->
     <!--                               view log in target/liberty/wlp/user/servers/defaultServer/logs-->
+    <!--                               open http://localhost:9080/edit-user-jpa-arquillian/ -->
     <!-- mvn liberty:undeploy -->
     <!-- mvn liberty:stop -->
     <build>
