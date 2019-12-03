@@ -1,6 +1,5 @@
 package com.example;
 
-import com.example.cdi.IGreeter;
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
@@ -22,7 +21,6 @@ public class UserDaoIT {
     public static WebArchive createDeployment() {
         WebArchive archive = ShrinkWrap.create(WebArchive.class)
                 .addPackage(UserDao.class.getPackage())
-                .addPackage(IGreeter.class.getPackage())
                 .addAsResource("test-persistence.xml", "META-INF/persistence.xml")
                 .addAsWebInfResource(EmptyAsset.INSTANCE, "beans.xml");
 

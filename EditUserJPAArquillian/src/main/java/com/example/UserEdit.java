@@ -1,8 +1,5 @@
 package com.example;
 
-import com.example.cdi.FR;
-import com.example.cdi.IGreeter;
-
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -14,31 +11,15 @@ public class UserEdit implements Serializable {
 
     private User user = new User();
 
-    @Inject private @FR IGreeter greeter;
-
-    // field injection
     @Inject
     private UserDao userDAO;
-
-    // ctor injection
-    // @Inject
-    // public UserEdit(UserDao userDAO) { this.userDAO = userDAO; }
-
-    // setter injection
-    // @Inject
-    // public void setUserDAO(UserDao userDAO) {
-    //     this.userDAO = userDAO;
-    // }
 
     public UserEdit() { }
 
     public String save() {
         userDAO.save(this.user);
-        System.out.println("UserEdit.save");
         return "index.jsp";
     }
-
-    public String getGreeting() { return greeter.greet("Bram"); }
 
     public void setUser(User user) {
         this.user = user;
@@ -48,5 +29,5 @@ public class UserEdit implements Serializable {
         return user;
     }
 
-    public UserDao getUserDAO() { return userDAO; }
+    public String getGreeting() { return "Hello Bram!"; }
 }

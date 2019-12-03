@@ -13,7 +13,6 @@ public class UserDao implements Serializable {
     private EntityManager em;
 
     public void save(User user) {
-        System.out.println("UserDao.save");
         findAll().forEach(System.out::println);
         em.persist(user);
     }
