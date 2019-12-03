@@ -27,9 +27,4 @@ public class UserDao implements Serializable {
         em.remove(user);
     }
 
-    public void get(User u) {
-        User user = em.find(User.class, u.getId());
-        em.remove(user);
-    }
-
 }

@@ -1,4 +1,4 @@
-package com.example;
+package com.example.cdi;
 
 import javax.inject.Qualifier;
 import java.lang.annotation.Documented;
@@ -9,5 +9,5 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 @Qualifier
 @Documented
 @Retention(RUNTIME)
-public @interface FR {
+public @interface EN {
 }

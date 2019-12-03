@@ -1,5 +1,8 @@
 package com.example;
 
+import com.example.cdi.FR;
+import com.example.cdi.IGreeter;
+
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.inject.Named;

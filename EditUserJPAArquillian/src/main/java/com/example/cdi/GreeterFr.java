@@ -1,6 +1,4 @@
-package com.example;
-
-import javax.inject.Named;
+package com.example.cdi;
 
 // @Dependent // not needed when empty beans.xml present in WEB-INF
 @FR

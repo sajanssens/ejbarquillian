@@ -1,5 +1,6 @@
 package com.example;
 
+import com.example.cdi.IGreeter;
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
@@ -16,11 +17,12 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.IsNull.notNullValue;
 
 @RunWith(Arquillian.class)
-public class UserEditTest {
+public class UserEditIT {
     @Deployment
     public static WebArchive createDeployment() {
         return ShrinkWrap.create(WebArchive.class)
                 .addPackage(UserEdit.class.getPackage())
+                .addPackage(IGreeter.class.getPackage())
                 .addAsResource("test-persistence.xml", "META-INF/persistence.xml")
                 .addAsWebInfResource(EmptyAsset.INSTANCE, "beans.xml");
     }
@@ -34,25 +36,4 @@ public class UserEditTest {
         assertThat(greeting, containsString("Bram"));
     }
 
-    @Test
-    public void save() {
-        User user = new User();
-        user.setFirstName("Bram");
-        user.setLastName("Janssens");
-
-        UserDao dao = userEdit.getUserDAO();
-
-        long janssens = dao.findAll().stream()
-                .filter(u -> u.getLastName().equals("Janssens"))
-                .count();
-
-        userEdit.setUser(user);
-        userEdit.save();
-
-        long janssens2 = dao.findAll().stream()
-                .filter(u -> u.getLastName().equals("Janssens"))
-                .count();
-
-        assertThat(janssens2 - janssens, is(1L));
-    }
 }

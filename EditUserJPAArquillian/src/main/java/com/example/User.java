@@ -1,6 +1,5 @@
 package com.example;
 
-
 import javax.persistence.*;
 import javax.validation.constraints.Size;
 
@@ -36,7 +35,13 @@ public class User {
         this.lastName = lastName;
     }
 
-    public Integer getId() {
-        return id;
+    public Integer getId() { return id; }
+
+    @Override public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                '}';
     }
 }
