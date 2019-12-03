@@ -5,8 +5,10 @@
         <feature>webProfile-7.0</feature>
         <feature>localConnector-1.0</feature>
     </featureManager>
+
     <applicationManager autoExpand="true"/>
     <applicationMonitor updateTrigger="mbean"/>
+
     <!--JPA:-->
     <dataSource id="DefaultDataSource" jndiName="jdbc/mySQL" type="javax.sql.XADataSource">
         <jdbcDriver javax.sql.XADataSource="com.mysql.cj.jdbc.MysqlXADataSource" libraryRef="MySQLLib"/>
@@ -16,6 +18,7 @@
         <file name="${shared.config.dir}/lib/global/mysql-connector-java-8.0.9-rc.jar"/>
     </library>
     <!--JPA - end-->
+
     <logging traceSpecification="*=info:eclipselink.sql=all" traceFileName="stdout" traceFormat="BASIC"/>
     <application id="edit_user_jpa_war_exploded"
                  location="C:\Git\Github\sajanssens\ejbarquillian\EditUserJPA\target\edit-user-jpa-1.0-SNAPSHOT"
