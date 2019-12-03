@@ -20,6 +20,7 @@
         <junit.version>4.12</junit.version>
         <arquillian.liberty.version>1.0.6</arquillian.liberty.version>
         <h2.connector.version>1.4.200</h2.connector.version>
+        <mysql.connector.version>8.0.18</mysql.connector.version>
         <openliberty.runtime.version>19.0.0.7</openliberty.runtime.version>
     </properties>
 
@@ -81,7 +82,7 @@
     <!-- mvn liberty:start -->
     <!-- mvn liberty:deploy@deploy-app deploys to  target/liberty/wlp/user/servers/defaultServer/apps -->
     <!--                               view log in target/liberty/wlp/user/servers/defaultServer/logs-->
-    <!--                               open http://localhost:9080/edit-user-jpa-arquillian/ -->
+    <!--                               open http://localhost:9080/edit-user-jpa-arquillian-and-more/ -->
     <!-- mvn liberty:undeploy -->
     <!-- mvn liberty:stop -->
     <build>
@@ -148,6 +149,16 @@
                             <outputDirectory>${project.build.directory}/liberty/wlp/usr/shared/resources
                             </outputDirectory>
                             <destFileName>h2.jar</destFileName>
+                        </artifactItem>
+                        <artifactItem>
+                            <groupId>mysql</groupId>
+                            <artifactId>mysql-connector-java</artifactId>
+                            <version>${mysql.connector.version}</version>
+                            <type>jar</type>
+                            <overWrite>false</overWrite>
+                            <outputDirectory>${project.build.directory}/liberty/wlp/usr/shared/resources
+                            </outputDirectory>
+                            <destFileName>mysql.jar</destFileName>
                         </artifactItem>
                     </artifactItems>
                 </configuration>
