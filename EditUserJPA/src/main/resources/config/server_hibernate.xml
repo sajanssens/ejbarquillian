@@ -20,8 +20,8 @@
     </library>
     <!--JPA - end-->
 
-    <application id="edit_user_jpa_war_exploded"
+    <!--<application id="edit_user_jpa_war_exploded"
                  location="C:\Git\Github\sajanssens\ejbarquillian\EditUserJPA\target\edit-user-jpa-1.0-SNAPSHOT"
-                 name="edit_user_jpa_war_exploded" type="war"/>
+                 name="edit_user_jpa_war_exploded" type="war"/>-->
 </server>
 

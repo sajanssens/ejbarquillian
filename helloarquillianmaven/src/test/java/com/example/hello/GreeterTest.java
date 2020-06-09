@@ -16,7 +16,7 @@ import javax.inject.Inject;
 // - complete the corresponding arquillian.xml
 // - in IDEA: click the play button and make a run configuration with an empty Manual arquillian container (since classpath is taken from pom)
 // - in maven: just run mvn test
-@RunWith(Arquillian.class)
+@RunWith(Arquillian.class) // !!
 public class GreeterTest {
 
     @Deployment

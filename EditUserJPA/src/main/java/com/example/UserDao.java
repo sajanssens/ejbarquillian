@@ -9,7 +9,7 @@ import java.util.List;
 @Stateless
 public class UserDao implements Serializable {
 
-    @PersistenceContext
+    @PersistenceContext(unitName = "MyPersistenceUnit")
     private EntityManager em;
 
     public void save(User user) {

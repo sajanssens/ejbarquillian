@@ -4,7 +4,7 @@ import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.jboss.shrinkwrap.api.asset.EmptyAsset;
-import org.jboss.shrinkwrap.api.spec.JavaArchive;
+import org.jboss.shrinkwrap.api.spec.WebArchive;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -20,9 +20,10 @@ import javax.inject.Inject;
 public class GreeterTest {
 
     @Deployment
-    public static JavaArchive createDeployment() {
-        JavaArchive jar = ShrinkWrap.create(JavaArchive.class, "mooienaam.jar")
+    public static WebArchive createDeployment() {
+        WebArchive jar = ShrinkWrap.create(WebArchive.class, "mooienaam.jar")
                 .addClass(Greeter.class)
+                // .addClass(GreeterTest.class)
                 .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml"); // we need an empty beans.xml file to activate CDI (EJB is automatically activated)
         System.out.println(jar.toString(true));
         return jar;

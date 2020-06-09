@@ -1,10 +1,9 @@
 package com.example;
 
-import javax.ejb.Stateful;
-import java.io.Serializable;
+import javax.ejb.Stateless;
 
-@Stateful
-public class UserDao implements Serializable {
+@Stateless
+public class UserDao {
 
     public void save(User user) {
         System.out.println("UserDao.save");

@@ -1,5 +1,6 @@
 package com.example;
 
+import com.example.cdi.EN;
 import com.example.cdi.FR;
 import com.example.cdi.IGreeter;
 
@@ -14,11 +15,10 @@ public class UserEdit implements Serializable {
 
     private User user = new User();
 
-    @Inject private @FR IGreeter greeter;
+    @Inject private @EN IGreeter greeter;
 
     // field injection
-    @Inject
-    private UserDao userDAO;
+    @Inject private UserDao userDAO;
 
     // ctor injection
     // @Inject

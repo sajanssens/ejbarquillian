@@ -1,6 +1,5 @@
 package com.example;
 
-
 import javax.persistence.*;
 import javax.validation.constraints.Size;
 

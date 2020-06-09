@@ -34,6 +34,7 @@ public class UserEditIT {
         String greeting = userEdit.getGreeting();
         assertThat(greeting, is(notNullValue()));
         assertThat(greeting, containsString("Bram"));
+        assertThat(greeting, containsString("UNAUTH"));
     }
 
 }
